@@ -1,0 +1,29 @@
+<!--Implemente um script JavaScript que exiba a data atual no formato:-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Atual</title>
+</head>
+<body>
+    <h1>Data Atual</h1>
+    <p id="data-formatada"></p>
+
+    <script>
+        // Obtém a data atual
+        const dataAtual = new Date();
+
+        // Formatação da data (dia/mês/ano)
+        const opcoesFormatacao = {
+            day: 'numeric',
+            month: '2-digit',
+            year: 'numeric'
+        };
+        const dataFormatada = dataAtual.toLocaleDateString('pt-BR', opcoesFormatacao);
+
+        // Exibe a data formatada na página
+        document.getElementById('data-formatada').textContent = `Data atual: ${dataFormatada}`;
+    </script>
+</body>
+</html>
